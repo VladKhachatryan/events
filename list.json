@@ -73,22 +73,31 @@
       "cover": "https://ticket.opera.am/uploads/images/Turandot__1494x1920_Updated-min-min%20(1).jpeg"
     },
     {
-      "id": "a1b4",
-      "title": "asdaf",
-      "date": "asfasfasf",
-      "time": "asfas",
-      "cover": "asfsaf",
+      "id": "c627",
+      "title": "Masquerade",
+      "date": "July 6",
+      "time": "19:00",
+      "cover": "https://ticket.opera.am/uploads/images/f0149c96e52c9bacf0dc54a7c3077cc6.jpg",
       "type": "ballet",
-      "composer": "asfaf"
+      "composer": "A. Khachaturian"
     },
     {
-      "id": "0d8e",
-      "title": "sfafasc",
-      "date": "asfasfcxz",
-      "time": "asfefvfbc ",
-      "cover": "asfa",
+      "id": "c6a6",
+      "title": "xoski",
+      "date": "asclaklc",
+      "time": "5",
+      "cover": "asfasfsa",
       "type": "opera",
-      "composer": "asfasfas"
+      "composer": "4542"
+    },
+    {
+      "id": "e935",
+      "title": "Masquerade",
+      "date": "July 6",
+      "time": "17000",
+      "cover": "https://ticket.opera.am/uploads/images/f0149c96e52c9bacf0dc54a7c3077cc6.jpg",
+      "type": "ballet",
+      "composer": "A. Khachaturian"
     }
   ]
 }

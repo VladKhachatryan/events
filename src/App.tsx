@@ -17,13 +17,13 @@ function App() {
           dispatch({type:ActionTypes.setEvents,payload:response})      
     })
 
-  },[state.currentFilter,state])
+  },[state.currentFilter])
   return <>
   <EventContext.Provider value={{state,dispatch}}>
    
     <Filter/>
-    <EventList/> 
     <AddEvent/>
+    <EventList/> 
   </EventContext.Provider>
     
   </>

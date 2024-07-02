@@ -1,4 +1,4 @@
-import  { ActionTypes, FilterTypes, IAction, IEvent, IState } from "./types";
+import  { ActionTypes, FilterTypes, IAction, IEvent, IState, events } from "./types";
 
 export const reducer=(state:IState,action:IAction)=>{
     switch (action.type){
@@ -11,8 +11,13 @@ export const reducer=(state:IState,action:IAction)=>{
         case ActionTypes.setFilter:
             return{
                 ...state,
-                currentFilter:action.payload as FilterTypes
-                
+                currentFilter:action.payload as FilterTypes   
+            }
+
+        case ActionTypes.addEvent:
+            return{
+                ...state,
+                events:[...state.events,action.payload as IEvent]   
             }
 
 

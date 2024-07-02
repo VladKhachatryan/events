@@ -1,8 +1,9 @@
 import { Box, Button, Modal, TextField,MenuItem,Select } from "@mui/material"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { addEvent } from "../lib/api";
-import { IEvent, events } from "../lib/types";
+import { ActionTypes, IEvent, events } from "../lib/types";
+import { EventContext } from "../lib/Context";
 const style = {
     position: 'absolute' as 'absolute',
     top: '50%',
@@ -26,6 +27,11 @@ const style = {
   }
 export const AddEvent = () => {
     const [open,setOpen]=useState<boolean>(false)
+    const context = useContext(EventContext)
+    if(!context){
+        throw new Error("Error")
+    }
+    const {dispatch} = context
     const {register,handleSubmit,formState: { errors },reset }=useForm<Inputs>({
         defaultValues:{
             type:"opera"
@@ -42,7 +48,7 @@ export const AddEvent = () => {
         }
         addEvent(event as IEvent)
         .then(res=>{
-            console.log(res);
+            dispatch({type:ActionTypes.addEvent,payload:res})
             reset()
             setOpen(false)         
         })
